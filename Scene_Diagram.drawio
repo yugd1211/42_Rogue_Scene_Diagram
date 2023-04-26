@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-26T12:08:01.698Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="xEktO2y5VZ73d0lfCN9a" version="21.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-26T12:11:36.282Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="dBurUkMHz-rRI-1mTib3" version="21.2.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2618" dy="2212" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -131,7 +131,7 @@
         <mxCell id="Y8M9MO8NN97qPmSPEtLH-63" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;eventAction으로 대장장이, 상인, 스킬 등의 이벤트를 호출 인자로 원하는 event를 받는다.&lt;br&gt;어떤 행동을 할지는 event에서 정의&lt;br&gt;event는 ui를 띄우고, 상속받는 클래스들에서 ui를 각 이벤트에 맞게 구성&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=12;fontStyle=1;verticalAlign=middle;align=center;fontFamily=Helvetica;fontColor=default;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-90" y="-684" width="510" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="EGVbobSlY5kvLiHjOKlU-0" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;메인씬, 전투씬이 씬 전환을 해도 유지해야 하는 정보 = &lt;br&gt;1. 캐릭터의 스테이터스(스탯, 장비, 스킬 등)&lt;br&gt;2. 라운드 정보(각 노드에 대한 이벤트, 현재 어느 노드)&amp;nbsp;&lt;br&gt;위의 정보들은 저장, 불러오기 할때도 저장되어야 하는 정보들이다. 아예 씬을 구성할때 json파일 저장, 읽는게 어떤가&lt;br&gt;아니면 전투 씬이 아닌 전투도 UI같이 기존 씬 위에 올리면 씬 이동이 아니라 걱정은 없을 것 같다.&lt;br&gt;그만큼 무거워질 수 있지만 오히려 씬이동후 셋팅해야 할 무언가를 오브젝트 풀처럼 캐싱해서 사용할 수도 있다.&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="EGVbobSlY5kvLiHjOKlU-0" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;메인씬, 전투씬이 씬 전환을 해도 유지해야 하는 정보 = &lt;br&gt;1. 캐릭터의 스테이터스(스탯, 장비, 스킬 등)&lt;br&gt;2. 라운드 정보(각 노드에 대한 이벤트, 현재 어느 노드)&amp;nbsp;&lt;br&gt;DontDestroyOnLoad를 사용하면 씬을 이동해도 오브젝트가 파괴되지 않는다.&lt;br&gt;하지만 위의 정보들은 저장, 불러오기 할때도 저장되어야 하는 정보들이다. 아예 씬을 구성할때 json파일 저장, 읽는게 어떤가&lt;br&gt;아니면 전투 씬이 아닌 전투도 UI같이 기존 씬 위에 올리면 씬 이동이 아니라 걱정은 없을 것 같다.&lt;br&gt;그만큼 무거워질 수 있지만 오히려 씬이동후 셋팅해야 할 무언가를 오브젝트 풀처럼 캐싱해서 사용할 수도 있다.&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-510" y="-1140" width="730" height="130" as="geometry" />
         </mxCell>
         <mxCell id="EGVbobSlY5kvLiHjOKlU-17" value="" style="endArrow=block;endSize=10;endFill=0;shadow=0;strokeWidth=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.464;entryY=1.026;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="EGVbobSlY5kvLiHjOKlU-18" target="Y8M9MO8NN97qPmSPEtLH-62" edge="1">
@@ -144,12 +144,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="EGVbobSlY5kvLiHjOKlU-18" value="Blacksmith" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-470" y="-390" width="140" height="38" as="geometry">
+          <mxGeometry x="-470" y="-390" width="140" height="90" as="geometry">
             <mxRectangle x="-360" y="-500" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="EGVbobSlY5kvLiHjOKlU-20" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="EGVbobSlY5kvLiHjOKlU-18" vertex="1">
-          <mxGeometry y="30" width="140" height="8" as="geometry" />
+          <mxGeometry y="30" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EGVbobSlY5kvLiHjOKlU-23" value="Merchant" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-305" y="-390" width="140" height="38" as="geometry">
